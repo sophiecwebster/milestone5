@@ -74,9 +74,10 @@ located <- left_join(tntell[, c(1,2,4,5,6,7)], tab, by = c("area" = "Area.code")
 ```
 
 ```{r making geographic plot}
+#"#f3b204", "#F59187"
 located %>%
    ggplot(aes(Location)) + 
-  geom_bar() + 
+  geom_bar(fill = "#f15b29") + 
   coord_flip() +
    theme_light() +
   theme(axis.text.y = element_text(lineheight = 10, size=6)) +
@@ -96,7 +97,7 @@ top_four <- located %>%
 
 top_four$n <- top_four$n / c(944, 708, 944, 944)
 top_four %>%
-  ggplot(aes(Location, n)) + geom_col()
+  ggplot(aes(Location, n)) + geom_col(fill = "#2bb673")
 
 # Massachusetts is almost off the charts! This is likely because we haven't
 # factored in international students, many of hom get a Massachusetts phone
@@ -109,7 +110,7 @@ internat <- located %>%
   count()
 internat$n <- internat$n / c(944, 2124, 944, 708)
 internat %>%
-  ggplot(aes(Location, n)) + geom_col()
+  ggplot(aes(Location, n)) + geom_col(fill = "#f3b204")
 ```
 
 ```{r word cloud, include=F}
