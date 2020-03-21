@@ -12,6 +12,16 @@ library(rvest)
 library(tm)
 library(wordcloud)
 library(wordcloud2)
+
+# For this week's milestone, I decided to bolster my plot of messages by
+# students' home states by reordering the names of the states alphabetically,
+# adding labels, and changing the theme and colors. Trying to make better sense
+# of this graph, I also added per capita versions with what sparse geographic
+# data I could find from Harvard (they're very cagey about the specifics of
+# where their students are from!). I could only really find this information
+# from the top 4 states, so I made a plot for their messaging statistics per
+# capita and then adjusted for international students, which I hypothesized are
+# lumped in with the Massachusetts area codes.
 ```
 Repo is available <a href="https://github.com/sophiecwebster/milestone5">here</a>.
 ```{r}
